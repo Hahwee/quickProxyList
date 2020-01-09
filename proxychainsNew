@@ -1,0 +1,265 @@
+# proxychains.conf  VER 3.1
+#
+#        HTTP, SOCKS4, SOCKS5 tunneling proxifier with DNS.
+#	
+
+# The option below identifies how the ProxyList is treated.
+# only one option should be uncommented at time,
+# otherwise the last appearing option will be accepted
+#
+dynamic_chain
+#
+# Dynamic - Each connection will be done via chained proxies
+# all proxies chained in the order as they appear in the list
+# at least one proxy must be online to play in chain
+# (dead proxies are skipped)
+# otherwise EINTR is returned to the app
+#
+#strict_chain
+#
+# Strict - Each connection will be done via chained proxies
+# all proxies chained in the order as they appear in the list
+# all proxies must be online to play in chain
+# otherwise EINTR is returned to the app
+#
+#random_chain
+#
+# Random - Each connection will be done via random proxy
+# (or proxy chain, see  chain_len) from the list.
+# this option is good to test your IDS :)
+
+# Make sense only if random_chain
+#chain_len = 2
+
+# Quiet mode (no output from library)
+#quiet_mode
+
+# Proxy DNS requests - no leak for DNS data
+#proxy_dns 
+
+# Some timeouts in milliseconds
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+
+# ProxyList format
+#       type  host  port [user pass]
+#       (values separated by 'tab' or 'blank')
+#
+#
+#        Examples:
+#
+#            	socks5	192.168.67.78	1080	lamer	secret
+#		http	192.168.89.3	8080	justu	hidden
+#	 	socks4	192.168.1.49	1080
+#	        http	192.168.39.93	8080	
+#		
+#
+#       proxy types: http, socks4, socks5
+#        ( auth types supported: "basic"-http  "user/pass"-socks )
+#
+[ProxyList]
+# add proxy here ...
+# meanwile
+#defaults set to "tor"
+#http 	127.0.0.1 9050
+http  127.0.0.1 9050
+http  50.246.120.125 8080
+http  69.65.65.178 34548
+http  159.65.253.61 3128
+http  107.190.148.202 43147
+http  45.79.159.216 3128
+http  173.46.67.172 58517
+http  167.172.248.53 3128
+http  208.97.133.64 80
+http  47.89.193.30 8118
+http  24.245.100.212 48678
+http  52.14.29.191 80
+http  70.169.150.122 48678
+http  208.67.183.240 80
+http  66.91.54.191 8080
+http  45.32.222.128 808
+http  192.200.200.125 3128
+http  72.35.40.34 8080
+http  149.28.79.30 3128
+http  70.169.70.83 80
+http  96.80.89.69 8080
+http  167.172.27.253 3128
+http  173.242.102.241 53603
+http  198.23.143.11 8080
+http  209.80.12.180 80
+http  85.208.209.221 8085
+http  31.40.255.57 8085
+http  45.138.101.136 8085
+http  199.167.184.124 80
+http  173.192.128.238 8123
+http  67.60.137.219 35979
+http  159.203.119.11 3128
+http  24.172.34.114 39020
+http  18.207.44.80 80
+http  54.191.0.160 80
+http  157.245.232.5 80
+http  50.192.195.69 52018
+http  50.242.113.57 58619
+http  35.229.97.65 81
+http  157.245.160.81 80
+http  138.68.41.90 3128
+http  138.197.222.35 8080
+http  67.205.132.241 8080
+http  165.227.215.71 8080
+http  45.55.27.161 3128
+http  174.138.54.49 8080
+http  138.197.204.55 8080
+http  138.68.240.218 8080
+http  71.183.100.76 42413
+http  96.87.184.101 43705
+http  35.236.161.124 3128
+http  107.178.4.215 31376
+http  173.82.105.53 80
+http  165.227.214.29 80
+http  52.6.215.123 80
+http  64.17.30.238 63141
+http  216.228.69.202 32170
+http  67.207.94.118 80
+http  45.55.53.228 44578
+http  31.220.63.167 80
+http  75.146.218.153 55768
+http  107.148.250.42 8080
+http  3.93.103.201 8080
+http  100.21.163.30 80
+http  173.162.43.195 80
+http  65.152.119.226 46620
+http  47.51.51.190 8080
+http  104.244.75.26 8080
+http  50.0.51.253 46917
+http  47.88.54.146 8118
+http  52.53.148.223 80
+http  204.186.174.222 8080
+http  159.203.163.19 3128
+http  52.53.201.223 80
+http  206.214.211.166 80
+http  205.185.115.100 8080
+http  69.130.120.228 46439
+http  192.200.200.82 3128
+http  45.55.62.247 8080
+http  76.8.255.114 8080
+http  142.93.122.133 8080
+http  198.199.91.20 3128
+http  192.200.200.86 3128
+http  52.53.129.205 80
+http  139.60.226.225 8080
+http  165.227.30.130 3128
+http  54.183.160.187 80
+http  52.53.199.255 80
+http  192.200.200.98 3128
+http  67.209.121.85 80
+http  138.197.5.192 8888
+http  165.227.78.104 8080
+http  70.169.132.131 48678
+http  198.98.55.168 8080
+http  165.227.248.222 3128
+http  159.89.245.63 3128
+http  54.183.180.132 80
+http  132.148.241.241 8888
+http  45.66.209.188 8085
+http  77.83.86.61 8085
+http  165.227.71.60 80
+http  67.63.33.7 80
+http  91.188.246.250 8085
+http  31.40.252.15 8085
+http  52.53.226.32 80
+http  212.119.42.87 8085
+http  199.116.170.132 8080
+http  109.94.220.163 8085
+http  54.183.183.239 80
+http  89.191.229.16 8085
+http  193.202.84.208 8085
+http  89.191.229.58 8085
+http  23.244.28.27 3128
+http  5.181.43.253 80
+http  45.67.214.82 8085
+http  31.40.252.195 8085
+http  209.43.33.98 8080
+http  2.57.78.198 8085
+http  212.119.43.28 8085
+http  24.123.196.28 59324
+http  18.218.5.0 80
+http  31.220.63.38 80
+http  193.202.15.88 8085
+http  193.202.84.189 8085
+http  85.209.150.97 8085
+http  193.202.12.36 8085
+http  104.155.103.87 80
+http  199.116.170.156 8080
+http  52.37.86.231 8118
+http  204.15.243.234 40860
+http  67.75.2.39 3128
+http  35.203.137.120 8080
+http  23.80.121.202 30201
+http  23.225.92.19 30022
+http  18.216.230.166 80
+http  74.113.173.78 47208
+http  207.148.30.112 8118
+http  13.56.80.154 80
+http  13.56.159.36 80
+http  13.56.248.129 80
+http  13.56.181.156 80
+http  13.56.82.109 80
+http  13.56.149.209 80
+http  198.143.178.77 3128
+http  50.236.148.254 39970
+http  192.200.200.109 3128
+http  159.89.138.73 80
+http  24.106.221.230 53281
+http  94.231.216.229 8085
+http  193.202.14.33 8085
+http  45.66.209.202 8085
+http  85.208.86.210 8085
+http  213.166.77.237 8085
+http  54.183.190.108 80
+http  193.202.12.208 8085
+http  45.66.209.29 8085
+http  66.90.255.99 8080
+http  45.66.209.178 8085
+http  91.243.92.38 8085
+http  85.208.87.195 8085
+http  185.88.101.22 8085
+http  63.249.67.70 53281
+http  3.226.221.182 80
+http  138.197.102.119 80
+http  5.189.206.104 8085
+http  91.243.89.54 8085
+http  45.158.184.106 80
+http  193.56.64.55 8085
+http  77.83.85.168 8085
+http  77.83.85.228 8085
+http  88.218.65.159 8085
+http  193.202.10.85 8085
+http  178.159.107.229 8085
+http  91.243.94.84 8085
+http  91.243.89.34 8085
+http  45.67.213.223 8085
+http  212.119.41.129 8085
+http  193.187.95.78 8085
+http  193.56.64.148 8085
+http  89.191.228.14 8085
+http  91.243.94.151 8085
+http  31.40.253.170 8085
+http  45.155.68.111 80
+http  213.166.77.63 8085
+http  91.243.92.245 8085
+http  45.67.212.97 8085
+http  192.241.223.145 80
+http  91.243.89.245 8085
+http  88.218.67.54 8085
+http  93.190.245.234 80
+http  45.86.244.202 80
+http  212.119.43.217 8085
+http  213.166.77.192 8085
+http  91.243.94.96 8085
+http  193.202.15.97 8085
+http  91.243.94.139 8085
+http  193.202.8.228 8085
+http  213.166.78.64 8085
+http  88.218.67.78 8085
+http  88.218.65.11 8085
+http  85.208.86.234 8085
